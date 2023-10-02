@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+
+}
+
+body {
+    background-color: #ffdece;
+
+}
+
+.noBarra {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.contenedor {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.235);
+    margin: 120px auto;
+}
+
+.contenedor header {
+    font-size: 1.5rem;
+    color: #a62520;
+    font-weight: 500;
+    text-align: center;
+}
+
+.contenedor .formulario {
+    margin-top: 30px;
+}
+
+.formulario .entrada {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.entrada label {
+    color: #a62520;
+}
+
+.formulario :where(.entrada input, ) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: rgb(107, 107, 107);
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.entrada input:focus {
+    box-shadow: 0 2px #a62520;
+}
+
+.formulario button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #cc544e;
+}
+
+.formulario button:hover {
+    background: #ffbeae;
+}
+
+.boton a {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #cc544e;
+}
+
+.boton a:hover {
+    background: #ffbeae;
+}
+
+.container .card {
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    box-shadow:
+        0 6px 8px rgba(0, 0, 0, 0.1),
+        0 0 5px rgba(0, 0, 0, 0.2),
+        inset 0 0 2px rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+    padding: 10px;
+    width: 20%;
+    margin: 100px;
+}
+
+.titulo_tarjetas {
+    text-align: center;
+    color: #993f3a;
+
+    font-size: 50px;
+}
+
+.card-text {
+    color: #fff;
+}
+
+.card-title {
+    color: #fff;
+}
+
+.inicio .imgIni {
+    max-width: 550px;
+    float: right;
+    margin: 10px;
+}
+
+.inicio {
+    margin: 110px auto;
+    width: 70%;
+}
+
+.inicio .textoInicio {
+    color: #993f3a;
+    margin: 70px;
+}
+
+.inicio .textoInicio h1 {
+    font-size: 84px;
+
+}
+
+.inicio .textoInicio p {
+    font-size: 20px;
+    color: #a07573;
+}
+
+.inicio .textoInicio .boton-i a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #a07573;
+}
+
+
+
+.main-form {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.235);
+    margin: 120px auto;
+}
+
+.main-form .boton-edit input {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #cc544e;
+}
+
+.main-form .boton-edit-a a {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #cc544e;
+}
+
+.card .boton-vedit {
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #a07573;
+}
+
+.card .boton-vedit {
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #a07573;
+}
+
+.card button {
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #a07573;
+}
+
+.resul {
+    color: #993f3a;
+    margin: 30px;
+}

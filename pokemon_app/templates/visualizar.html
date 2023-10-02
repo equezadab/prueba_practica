@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src={% static 'js/jquery-3.7.1.min.js' %}></script>
+</head>
+
+<body>
+    <div class="barra">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'ver' %}"><img src={% static 'img/logo.png' %} alt="45px"
+                        height="45px">POKEDÉX</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Hola!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ver_form' %}">Agregar</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ver Pokemons</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <p></p>
+    <h2 class="titulo_tarjetas">POKEMÓN</h2>
+    {% for pokemon in pokemons %}
+    <div class="card">
+        <div class="body_tarjetas">
+            <img src="{{pokemon.imagen.url}}" alt="50px" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">ID: {{pokemon.id}}</p>
+                <h4 class="card-title">{{pokemon.nombre}}</h4>
+
+            </div>
+            <div class="boton-vedit">
+                <a href="{% url 'edit_pokemon' pokemon.id %}" class="btn">Editar</a>
+            </div>
+
+            <form action="{% url 'borrar_pokemon' pokemon.id %}" method="POST" class="borrar_pokemon">
+                {% csrf_token %}
+                <button>Eliminar</button>
+            </form>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+
+</body>
+
+</html>
